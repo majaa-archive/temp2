@@ -142,6 +142,7 @@ TARGET_SOC := s5e8835
 include hardware/samsung_slsi-linaro/config/BoardConfig8835.mk
 
 ## Properties
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 ## Recovery
