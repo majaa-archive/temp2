@@ -90,11 +90,8 @@ PRODUCT_PACKAGES += \
     samsung.hardware.media.c2@1.2-service \
 
 PRODUCT_PACKAGES += \
-    libExynosC2H264Dec \
     libExynosC2H264Enc \
-    libExynosC2HevcDec \
     libExynosC2HevcEnc \
-    libExynosC2Vp8Dec \
     libExynosC2Vp8Enc
 
 PRODUCT_PACKAGES += \
