@@ -120,7 +120,6 @@ recovery/root/vendor/firmware/hx83102e_gta4xls.bin
 recovery/root/vendor/firmware/w9021_gta4xls.bin
 
 ## RIL
--vendor/bin/cbd
 vendor/etc/init/init.baseband.rc
 -vendor/lib64/libengmode_client.so
 
