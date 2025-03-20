@@ -6,9 +6,9 @@ vendor/etc/dolby/dax-default.xml
 vendor/etc/usb_audio_policy_configuration.xml
 
 ## Audio - Dolby Atmos
--vendor/lib/libprofileparamstorage.so
--vendor/lib/libsecaudiocoreutils.so
--vendor/lib/libspatializerparamstorage.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
+vendor/lib/libspatializerparamstorage.so
 
 ## Audio Firmware
 vendor/firmware/APBargeIn_AUDIO_SLSI.bin
@@ -27,23 +27,23 @@ vendor/firmware/dax_param.bin
 vendor/firmware/dolby.bin
 
 ## Camera
--vendor/lib64/hw/camera.s5e8825.so
--vendor/lib64/libexynoscamera_plugin.so
+vendor/lib64/hw/camera.s5e8825.so
+vendor/lib64/libexynoscamera_plugin.so
 
 ## Camera dependencies
--vendor/lib64/libMERTA.so
--vendor/lib64/libc++_shared.so
--vendor/lib64/libexynoscamera_merta_plugin.so
--vendor/lib64/libexynoscamera_swlme_plugin.so
--vendor/lib64/libexynoscamera_vpl_plugin.so
--vendor/lib64/libhwjsqz.so
--vendor/lib64/liblmecpu.so
--vendor/lib64/libsec2lsi_conversion.so
--vendor/lib64/libsensorlistener.so
--vendor/lib64/libswlme.so
--vendor/lib64/libuniapi.so
--vendor/lib64/libuniplugin.so
--vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib64/libMERTA.so
+vendor/lib64/libc++_shared.so
+vendor/lib64/libexynoscamera_merta_plugin.so
+vendor/lib64/libexynoscamera_swlme_plugin.so
+vendor/lib64/libexynoscamera_vpl_plugin.so
+vendor/lib64/libhwjsqz.so
+vendor/lib64/liblmecpu.so
+vendor/lib64/libsec2lsi_conversion.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libswlme.so
+vendor/lib64/libuniapi.so
+vendor/lib64/libuniplugin.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
 ## Codecs
 vendor/etc/media_codecs.xml
@@ -81,35 +81,35 @@ vendor/firmware/volumemonitor.bin
 vendor/firmware/w9021_gta4xls.bin
 
 ## Gatekeeper
--vendor/lib/hw/gatekeeper.s5e8825.so
--vendor/lib64/hw/gatekeeper.s5e8825.so
+vendor/lib/hw/gatekeeper.s5e8825.so
+vendor/lib64/hw/gatekeeper.s5e8825.so
 
 ## GPS
 vendor/bin/hw/gps.sh
--vendor/bin/hw/gpsd
--vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
 vendor/etc/gnss/ca.pem
 vendor/etc/gnss/gps.cfg
 vendor/etc/init/init.gps.rc
 vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
--vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
--vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so
--vendor/lib64/libwrappergps.so
--vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
--vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
+vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so;FIX_SONAME
+vendor/lib64/libwrappergps.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
 ## Graphics
--vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1
--vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1
--vendor/lib/hw/vulkan.mali.so
--vendor/lib64/hw/vulkan.mali.so
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1
+vendor/lib/hw/vulkan.mali.so
+vendor/lib64/hw/vulkan.mali.so
 
 ## Keymint
--vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
+vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
 vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
--vendor/lib64/libskeymint10device.so
--vendor/lib64/libskeymint_cli.so
--vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
+vendor/lib64/libskeymint10device.so
+vendor/lib64/libskeymint_cli.so
+vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
 # Ramdisk firmware
 vendor_ramdisk/vendor/firmware/hx83102e_gta4xls.bin
@@ -121,40 +121,43 @@ recovery/root/vendor/firmware/w9021_gta4xls.bin
 
 ## RIL
 vendor/etc/init/init.baseband.rc
--vendor/lib64/libengmode_client.so
+vendor/lib64/libengmode_client.so
 
 ## RIL - from a14 - A145FXXS5BXA1
--vendor/lib/libsecril-client.so;MODULE=libsecril-client.s5e8825|96bf65152d221ac528b763f625bb93e56899033d
--vendor/lib64/libsecril-client.so;MODULE=libsecril-client.s5e8825|26efd845750d4ad91e3a5c5dd7d95d40e8ef52a8
+vendor/lib/libsecril-client.so|96bf65152d221ac528b763f625bb93e56899033d
+vendor/lib64/libsecril-client.so|26efd845750d4ad91e3a5c5dd7d95d40e8ef52a8
 
 ## SECNATIVE
--vendor/lib/libsecnativefeature.so
--vendor/lib64/libsecnativefeature.so
+vendor/lib/libsecnativefeature.so
+vendor/lib64/libsecnativefeature.so
 
 ## TEEGRIS
--vendor/bin/tzdaemon
--vendor/bin/tzts_daemon
+vendor/bin/tzdaemon
+vendor/bin/tzts_daemon
 vendor/etc/init/teegris_v4.rc
--vendor/lib/libuuid.so
--vendor/lib/libteecl.so
--vendor/lib64/libteecl.so
--vendor/lib64/libuuid.so
+vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
+vendor/lib/libteecl.so
+vendor/lib64/libteecl.so
+vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
 
 ## Sensors
 vendor/etc/init/init.sensorhub.rc
 vendor/etc/sensors/hals.conf
--vendor/lib/sensors.grip.so
--vendor/lib/sensors.sensorhub.so
--vendor/lib/sensors.inputvirtual.so
--vendor/lib64/sensors.grip.so
--vendor/lib64/sensors.inputvirtual.so
--vendor/lib64/sensors.sensorhub.so
+vendor/lib/sensors.grip.so
+vendor/lib/sensors.sensorhub.so
+vendor/lib/sensors.inputvirtual.so
+vendor/lib64/sensors.grip.so
+vendor/lib64/sensors.inputvirtual.so
+vendor/lib64/sensors.sensorhub.so
+
+## VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
+vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
 
 ## Widevine
--vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
--vendor/lib64/libwvhidl.so
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/lib64/libwvhidl.so
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc

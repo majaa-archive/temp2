@@ -67,19 +67,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung \
-    android.hardware.thermal@2.0.vendor:64 \
-    liblzma.vendor:64 \
-    libsensorndkbridge:64 \
-    libshim_camera:64 \
-    libunwindstack.vendor:64 \
-    libutilscallstack.vendor:64 \
-    libvpl:64
-
-PRODUCT_PACKAGES += \
-    libcsc:64 \
-    libepicoperator:64 \
-    libhwjpeg:64
+    android.hardware.camera.provider-service.samsung
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -108,15 +96,13 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl
 
 PRODUCT_PACKAGES += \
-    android.hardware.composer.hwc3-service.slsi \
-    libion
+    android.hardware.composer.hwc3-service.slsi
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4.vendor:64 \
     android.hardware.drm-service.clearkey
 
 # fastbootd
@@ -131,11 +117,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
-
-# GNSS
-PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor:64 \
-    android.hardware.gnss@2.1.vendor:64
 
 # Graphics
 # Device uses high-density artwork where available
@@ -168,20 +149,6 @@ PRODUCT_PACKAGES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc
-
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.sharedsecret-V1-ndk.vendor:64 \
-    libcppbor_external.vendor:64 \
-    libkeymaster4_1support.vendor:64 \
-    libkeymaster_portable.vendor:64 \
-    libkeymint.vendor:64 \
-    libpuresoftkeymasterdevice.vendor:64
-
-PRODUCT_PACKAGES += \
-    libcrypto-tm \
-    libshim_crypto:64 \
-    libssl-tm
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -240,10 +207,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat
-
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -254,12 +217,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.0.vendor:64 \
     android.hardware.sensors-service.samsung-multihal
-
-# Shims
-PRODUCT_PACKAGES += \
-    libshim_sensorndkbridge
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -291,10 +249,6 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
     android.hardware.usb.gadget-service.samsung
-
-# VNDK
-PRODUCT_PACKAGES += \
-    libutils-v32
 
 # WiFi
 PRODUCT_PACKAGES += \
