@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version P620XXS3AXH2, unless pinned
+# Common proprietary files - from Samsung package version P620XXS5AYB4, unless pinned
 
 ## Audio
 vendor/etc/default_volume_tables.xml
@@ -116,8 +116,8 @@ vendor_ramdisk/vendor/firmware/hx83102e_gta4xls.bin
 vendor_ramdisk/vendor/firmware/w9021_gta4xls.bin
 
 # Recovery firmware
-recovery/root/vendor/firmware/hx83102e_gta4xls.bin
-recovery/root/vendor/firmware/w9021_gta4xls.bin
+vendor_ramdisk/vendor/firmware/hx83102e_gta4xls.bin:recovery/root/vendor/firmware/hx83102e_gta4xls.bin
+vendor_ramdisk/vendor/firmware/w9021_gta4xls.bin:recovery/root/vendor/firmware/w9021_gta4xls.bin
 
 ## RIL
 vendor/etc/init/init.baseband.rc
