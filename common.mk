@@ -69,6 +69,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
 
+PRODUCT_PACKAGES += \
+    libvpl
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
