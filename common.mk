@@ -115,10 +115,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
@@ -158,6 +154,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc
 
 # Lineage Health
+$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
+$(call soong_config_set,lineage_health,fast_charge_value_none,1)
+$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
+
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
