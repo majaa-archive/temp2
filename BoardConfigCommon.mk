@@ -186,7 +186,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 $(call soong_config_set,cbd,protocol,sipc)
 
 ## Security
-VENDOR_SECURITY_PATCH := 2025-02-01
+VENDOR_SECURITY_PATCH := 2025-08-01
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
