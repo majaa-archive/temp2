@@ -170,14 +170,6 @@
             <!-- measured [146-156] lower-upper [38-407] median * 1.5 [227] -->
             <Limit name="measured-frame-rate-1920x1080" range="84-185" />
         </MediaCodec>
-        <MediaCodec name="c2.sec.mpeg4.decoder" type="video/mp4v-es" update="true">
-            <!-- measured [2109-2184] lower-upper [542-5773] median * 1.5 [3220] -->
-            <Limit name="measured-frame-rate-176x144" range="1193-2624" />
-            <!-- measured [1512-1513] lower-upper [382-4069] median * 1.5 [2269] -->
-            <Limit name="measured-frame-rate-480x360" range="841-1849" />
-            <!-- measured [557-558] lower-upper [141-1502] median * 1.5 [837] -->
-            <Limit name="measured-frame-rate-1280x720" range="310-683" />
-        </MediaCodec>
     </Decoders>
 
     <Encoders>
