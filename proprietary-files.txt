@@ -45,6 +45,10 @@ vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
+## Camera Dummy Libs
+vendor/lib/libexynoscamera3.so;DUMMY_SHARED_LIB
+vendor/lib64/libexynoscamera3.so;DUMMY_SHARED_LIB
+
 ## Codecs
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_c2.xml
