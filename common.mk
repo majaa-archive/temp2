@@ -161,7 +161,22 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
 
-# init
+#OPENEUICC
+ifneq ($(wildcard packages/apps/OpenEUICC),)
+PRODUCT_PACKAGES += \
+    OpenEUICC
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.hardware.telephony.euicc.xml
+endif
+
+# HIDL
+# TODO(b/330696629) remove this once device can drop HIDL.
+PRODUCT_PACKAGES += \
+    hwservicemanager \
+    android.hidl.allocator@1.0-service
+
+# Init
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/fstab.s5e8835:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e8835 \
     $(COMMON_PATH)/configs/init/fstab.s5e8835:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.s5e8835 \
