@@ -36,6 +36,10 @@
         "target_path": "hardware/samsung_slsi-linaro/interfaces"
     },
     {
+        "repository": "android_hardware_samsung_slsi-linaro_openmax",
+        "target_path": "hardware/samsung_slsi-linaro/openmax"
+    },
+    {
         "repository": "android_hardware_samsung_slsi_scsc_wifibt_wifi_hal",
         "target_path": "hardware/samsung_slsi/scsc_wifibt/wifi_hal"
     },
