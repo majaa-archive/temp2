@@ -55,6 +55,17 @@ PRODUCT_COPY_FILES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
+$(call soong_config_set_bool,exynos_audio,support_direct_multi_channel_stream,true)
+$(call soong_config_set_bool,exynos_audio,use_camcorder_quad_mic,true)
+$(call soong_config_set_bool,exynos_audio,use_offload_effect_library,true)
+$(call soong_config_set_bool,exynos_audio,use_quad_mic,true)
+$(call soong_config_set_bool,exynos_audio,use_sec_audio_samsungrecord,true)
+$(call soong_config_set_bool,exynos_audio,use_sec_audio_support_gamechat_spk_aec,true)
+$(call soong_config_set_bool,exynos_audio,use_usb_offload,true)
+$(call soong_config_set,exynos_audio,predefined_low_capture_duration,20)
+$(call soong_config_set,exynos_audio,proxy_header,//$(COMMON_PATH):audio_proxy_headers)
+$(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/a54x-common:libSamsungPostProcessConvertor)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl:64 \
@@ -233,7 +244,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
-    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
+    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1 \
+    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1/proxy \
     hardware/samsung_slsi/libbt
 
 # Thermal
