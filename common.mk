@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
-    audio.primary.universal8835 \
+    audio.primary.s5e8835 \
     audio.r_submix.default \
     audio.usb.default
 

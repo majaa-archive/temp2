@@ -151,7 +151,7 @@ BOARD_ROOT_EXTRA_FOLDERS := efs
 
 ## Platform
 BOARD_VENDOR := samsung
-TARGET_BOARD_PLATFORM := universal8835
+TARGET_BOARD_PLATFORM := s5e8835
 TARGET_BOOTLOADER_BOARD_NAME := s5e8835
 TARGET_SOC := s5e8835
 include hardware/samsung_slsi-linaro/config/BoardConfig8835.mk
