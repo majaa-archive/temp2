@@ -41,13 +41,14 @@ def AddFirmwareImage(info, model, basename, dest, simple=False, offset=8):
       info.script.AppendExtra('package_extract_file("firmware/%s/%s", "%s");' % (model, basename, dest))
     else:
       size = info.input_zip.getinfo("RADIO/%s_%s" % (basename, model)).file_size
-      info.script.AppendExtra('assert(s5e8825.write_data_bt("firmware/%s/%s", "%s", %d, %d));' % (model, basename, dest, offset, size))
+      info.script.AppendExtra('assert(s5e8835.write_data_bt("firmware/%s/%s", "%s", %d, %d));' % (model, basename, dest, offset, size))
       return size
     return 0
 
 def OTA_InstallEnd(info):
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
+  AddImage(info, "init_boot.img", "/dev/block/by-name/init_boot")
   AddImage(info, "vendor_boot.img", "/dev/block/by-name/vendor_boot")
 
   if "RADIO/models" in info.input_zip.namelist():
@@ -60,15 +61,15 @@ def OTA_InstallEnd(info):
         numImages = 0
         info.script.AppendExtra('# Firmware update to %s for %s' % (version, model))
         info.script.AppendExtra('ifelse (getprop("ro.boot.em.model") == "%s" &&' % model)
-        info.script.AppendExtra('s5e8825.verify_no_downgrade("%s") == "0" &&' % version)
+        info.script.AppendExtra('s5e8835.verify_no_downgrade("%s") == "0" &&' % version)
         info.script.AppendExtra('getprop("ro.boot.bootloader") != "%s",' % version)
-        info.script.AppendExtra('assert(s5e8825.mark_header_bt("/dev/block/by-name/bota", 0, 0, 0));')
+        info.script.AppendExtra('assert(s5e8835.mark_header_bt("/dev/block/by-name/bota", 0, 0, 0));')
         for image in 'fld.bin', 'harx.bin', 'keystorage.bin', 'ldfw.img', 'sboot.bin', 'tzar.img', 'tzsw.img', 'uh.bin', 'up_param.bin':
           size = AddFirmwareImage(info, model, image, "/dev/block/by-name/bota", False, offset)
           if size > 0:
             numImages += 1
             offset += size + 36 # header size
-        info.script.AppendExtra('assert(s5e8825.mark_header_bt("/dev/block/by-name/bota", 0, %d, 3142939818));' % numImages)
+        info.script.AppendExtra('assert(s5e8835.mark_header_bt("/dev/block/by-name/bota", 0, %d, 3142939818));' % numImages)
         AddFirmwareImage(info, model, "modem.bin", "/dev/block/by-name/radio", True)
         AddFirmwareImage(info, model, "modem_debug.bin", "/dev/block/by-name/cp_debug", True)
         info.script.AppendExtra(',"");')

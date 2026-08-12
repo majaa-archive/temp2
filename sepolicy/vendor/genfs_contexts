@@ -1,8 +1,9 @@
-## Proc
+# Proc
+genfscon proc /bus/input/devices                                                                               u:object_r:proc_bus_input:s0
 genfscon proc /simslot_count                                                                                   u:object_r:proc_simslot_count:s0
 genfscon proc /sys/vm/swappiness                                                                               u:object_r:proc_swappiness:s0
 
-## Sysfs
+# Sysfs
 # Class
 genfscon sysfs /class/video4linux                                                                              u:object_r:sysfs_v4l:s0
 

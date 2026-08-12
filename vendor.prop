@@ -10,10 +10,21 @@ aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
 af.fast_track_multiplier=1
+ro.audio.spatializer_enabled=true
+
+## Camera
+ro.camera.disableJpegR=true
+
+## Keystore
+ro.hardware.keystore_desede=true
+
+persist.logd.logpersistd=logcatd
+persist.logd.logpersistd.size=4
+persist.logd.logpersistd.rotate_kbytes=1024
 
 ## Bluetooth
 bluetooth.device.class_of_device=90,1,16
-bluetooth.device.default_name=Galaxy Tab S6 Lite
+bluetooth.device.default_name=Galaxy A54 5G
 bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
@@ -56,12 +67,12 @@ ro.vendor.ddk.set.afbc=1
 ## Incremental FS
 ro.incremental.enable=true
 
-# Media
+## Media
 debug.stagefright.c2inputsurface=-1
 
 ## Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
-# Call deleteAllKeys if vold detects a factory reset
+## Call deleteAllKeys if vold detects a factory reset
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.metadata.method=dm-default-key
 
@@ -70,13 +81,13 @@ vendor.powerhal.disp.idle_support=false
 
 ## Samsung specific
 ro.product_ship=true
-# Set csc support in OMX
-# If not set or set to 0, OMX will only use BT.601 colorspace.
+## Set csc support in OMX
+## If not set or set to 0, OMX will only use BT.601 colorspace.
 ro.vendor.cscsupported=1
 
 ## SoC
 ro.soc.manufacturer=Samsung
-ro.soc.model=Exynos 1280
+ro.soc.model=Exynos 1380
 
 ## Wi-Fi
 wifi.direct.interface=p2p0

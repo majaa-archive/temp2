@@ -1,179 +1,404 @@
-# Common proprietary files - from Samsung package version P620XXS7BYH2, unless pinned
+# Common proprietary files for the Samsung Galaxy A54 (Exynos 1380)
 
-## Audio
+# Audio
 vendor/etc/default_volume_tables.xml
 vendor/etc/dolby/dax-default.xml
+vendor/etc/sec_audio_volume_curve.xml
 vendor/etc/usb_audio_policy_configuration.xml
+vendor/lib64/libSamsungPostProcessConvertor.so
+vendor/lib64/lib_SamsungRec_07010.so
+vendor/lib64/lib_SoundAlive_SRC384_ver320.so
+vendor/lib64/lib_soundaliveresampler.so
+vendor/lib64/libaboxpcmdump.so
+vendor/lib64/libalsautils_sec.so
+vendor/lib64/libaudioparamupdate.so
+vendor/lib64/vndk/libaudioroute.so:vendor/lib64/libaudioroute_samsung.so;FIX_SONAME
+vendor/lib64/libdatamod.so
+vendor/lib64/liblastaboxmsg.so
+vendor/lib64/librecordalive.so
+vendor/lib64/libsecaudioinfo.so
+vendor/lib64/libsecaudiolevel.so
+vendor/lib64/libspeakercalibration.so
 
-## Audio - Dolby Atmos
-vendor/lib/libprofileparamstorage.so
-vendor/lib/libsecaudiocoreutils.so
-vendor/lib/libspatializerparamstorage.so
+# Effects
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libaudiosaplus_sec.so
+vendor/lib64/soundfx/libmyspace.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswspatializer.so
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/lib_SoundAlive_play_plus_ver500.so
+vendor/lib64/lib_SoundBooster_ver1100.so
+vendor/lib64/libprofileparamstorage.so
+vendor/lib64/libsecaudiocoreutils.so
+vendor/lib64/libspatializerparamstorage.so
 
-## Audio Firmware
-vendor/firmware/APBargeIn_AUDIO_SLSI.bin
-vendor/firmware/APBiBF_AUDIO_SLSI.bin
-vendor/firmware/APDV_AUDIO_SLSI.bin
-vendor/firmware/APSV_AUDIO_SLSI.bin
+# Hotword
+product/etc/permissions/privapp-permissions-google-product.xml
+product/etc/sysconfig/asi_features.xml
+product/etc/sysconfig/sysconfig_contextual_search.xml
+product/etc/sysconfig/sysconfig_gemini.xml
+product/priv-app/HotwordEnrollmentOKGoogleEx4CORTEXM4/HotwordEnrollmentOKGoogleEx4CORTEXM4.apk
+product/priv-app/HotwordEnrollmentXGoogleEx4CORTEXM4/HotwordEnrollmentXGoogleEx4CORTEXM4.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
+# Sound Trigger
+vendor/etc/sound_trigger_info.xml
+vendor/lib64/hw/sound_trigger.primary.s5e8835.so
+
+# Camera
+vendor/lib64/libIRTA.so
+vendor/lib64/libeis_core.so
+vendor/lib64/libsec2lsi_conversion.so
+vendor/lib64/libuniapi.so
+vendor/lib64/libuniplugin.so
+
+# Camera Dependencies
+vendor/lib64/libcsc.so
+vendor/lib64/libexynosscaler.so
+vendor/lib64/libgiantmscl.so
+vendor/lib64/libhwjpeg.so
+vendor/lib64/libhwjsqz.so
+vendor/lib64/libmpbase.so
+vendor/lib64/libsemseg.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libvpl.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib64/libhypervintf.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
+vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
+vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.camera.provider-service.xml
+vendor/lib64/libExtIRTA.so
+vendor/lib64/lib_profiler.so
+vendor/lib64/libdualcam_refocus_video.so
+vendor/lib64/libsamsungcamerahal.so
+vendor/lib64/libsamsungcamerahalutils.so
+vendor/lib64/libsamsungcamerahwl_impl.so
+vendor/lib64/vendor.samsung.hardware.camera.device-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.camera.provider-V1-ndk.so
+
+# Display
+vendor/etc/dqe/calib_data_colormode0_s6e3fc5_a54x.xml
+vendor/etc/dqe/calib_data_atc_s6e3fc5_a35x.xml
+vendor/etc/dqe/calib_data_atc.xml
+vendor/etc/dqe/calib_data_bypass.xml
+vendor/etc/dqe/calib_data_colormode0.xml
+vendor/etc/dqe/calib_data_colortemp.xml
+vendor/etc/dqe/calib_data_eyetemp.xml
+vendor/etc/dqe/calib_data_rgbgain.xml
+vendor/etc/dqe/calib_data_skincolor.xml
+vendor/etc/dqe/calib_data_whitepoint.xml
+vendor/etc/dqe/DQE_coef_data.xml
+vendor/etc/dqe/hdr10Info.xml
+vendor/etc/dqe/hdr10Lut_Default.xml
+vendor/etc/dqe/hdr10Lut_Inner_SRGB.xml
+vendor/etc/dqe/hdr10pInfo.xml
+vendor/etc/dqe/hdr10pLut_Default.xml
+vendor/etc/dqe/hdr10pLut_Inner_SRGB.xml
+vendor/etc/dqe/hdrHwDPU.xml
+vendor/etc/dqe/hdrModuleSpecifiers.xml
+vendor/etc/dqe/hdrTuneLut.xml
+vendor/etc/dqe/hlgInfo.xml
+vendor/etc/dqe/hlgLut_Default.xml
+vendor/etc/dqe/hlgLut_Inner_SRGB.xml
+vendor/etc/dqe/wcgLut.xml
+vendor/lib64/libExynosHWCService.so
+vendor/lib/libdisplaycolor_default.so
+vendor/lib/libhdr10p_meta_plugin_default.so
+vendor/lib/libhdr_plugin.so
+vendor/lib/vendor.samsung.libcolor.custom.so
+vendor/lib64/libdisplaycolor_default.so
+vendor/lib64/libhdr10p_meta_plugin_default.so
+vendor/lib64/libhdr_plugin.so
+vendor/lib64/vendor.samsung.libcolor.custom.so
+
+# DRM
+vendor/bin/hw/android.hardware.drm-service.widevine
+vendor/etc/init/android.hardware.drm-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
+vendor/lib64/liboemcrypto.so
+vendor/lib64/libwvaidl.so
+
+# ENN
+vendor/lib64/libenn_common_utils.so
+vendor/lib64/libenn_cpu_operators.so
+vendor/lib64/libenn_engine_lib.so
+vendor/lib64/libenn_model.so
+vendor/lib64/libenn_public_api_cpp_lib.so
+vendor/lib64/libenn_user_driver_cpu.so
+vendor/lib64/libenn_user_driver_gpu_lib.so
+vendor/lib64/libenn_user_driver_unified.so
+vendor/lib64/libenn_user_lib.so
+
+# Epic
+vendor/lib64/libepicoperator.so
+vendor/lib64/vendor.samsung_slsi.hardware.epic@1.0.so
+
+# Fingerprint
+vendor/etc/init/init.fingerprint.rc
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsfp_sensor.so
+vendor/lib64/libsfp_teegw.so
+vendor/lib64/libsynaFpSensorTestNwd.so
+vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
+
+# Gatekeeper
+vendor/lib64/hw/gatekeeper.s5e8835.so
+
+# GPS
+vendor/bin/hw/gps.sh
+vendor/bin/hw/gpsd
+vendor/bin/hw/macloader
+vendor/bin/hw/vendor.samsung.hardware.gnss-service
+vendor/etc/gnss/ca.pem
+vendor/etc/gnss/deleteLogCommands
+vendor/etc/gnss/gps.cfg
+vendor/etc/gnss/gps.debug.cfg
+vendor/etc/gnss/gps.issuetracker.cfg
+vendor/etc/gnss/hardware_factors.conf
+vendor/etc/init/init.gps.rc
+vendor/etc/init/vendor.samsung.hardware.gnss-service.rc
+vendor/lib64/gnss_aidl_lib.so
+vendor/lib64/libwrappergps.so
+vendor/lib64/vendor.samsung.hardware.gnss-V3-ndk.so
+
+# Graphics
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1
+vendor/lib64/hw/vulkan.mali.so
+
+# Keymint
+vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
+vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
+vendor/lib64/libskeymint10device.so
+vendor/lib64/libskeymint_cli.so
+vendor/lib64/vendor.samsung.hardware.keymint-V2-ndk.so
+vendor/lib64/libsec_semHalTlc.so
+vendor/lib64/libsec_semRil.so
+vendor/lib64/libspictrl.so
+
+# NFC
+vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
+vendor/etc/init/init.nfc.samsung.rc
+vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc
+vendor/etc/libese-nxp.conf
+vendor/etc/libnfc-nxp.conf
+vendor/etc/nfc/libnfc-nxp_RF.conf
+vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
+vendor/lib64/ese_spi_nxp.so
+vendor/lib64/nfc_nci_nxpsn.so
+vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
+
+# RIL
+vendor/bin/hw/rild
+vendor/etc/init/init.baseband.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/init/vendor.samsung.rilchip.slsi.rc
+vendor/etc/init/vendor.samsung.rild.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml
+vendor/lib64/libVendorSemDataProps.so
+vendor/lib64/libVendorSemTelephonyProps.so
+vendor/lib64/libril_sem.so
+vendor/lib64/libsec-ril.so
+vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so
+vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so
+vendor/bin/dmd
+vendor/etc/init/dmd.rc
+vendor/etc/init/init.vendor.onebinary.rc
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_ltn.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_se13_prebuilt.bin
+vendor/lib64/libengmode_client.so
+vendor/lib64/libfloatingfeature.so
+vendor/lib64/libsecnativefeature.so
+vendor/lib64/libsecril-client.so
+vendor/lib64/libsemnativecarrierfeature.so
+vendor/lib64/libvkmanager_vendor.so
+
+# Sensors
+vendor/etc/init/init.sensorhub.rc
+vendor/lib64/sensors.grip.so
+vendor/lib64/sensors.inputvirtual.so
+vendor/lib64/sensors.sensorhub.so
+
+# TEEgris
+vendor/bin/tzdaemon
+vendor/bin/tzts_daemon
+vendor/etc/init/teegris.rc
+vendor/lib64/libteecl.so
+vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
+
+# WiFi
+vendor/bin/init.insmod.sh
+vendor/etc/init/wifi.rc
+vendor/etc/init/wifi_slsi.rc
+vendor/etc/init.insmod.s5e8835.cfg
+
+# Audio Firmware
 vendor/firmware/AP_AUDIO_SLSI.bin
+vendor/firmware/APBargeIn_AUDIO_SLSI.bin
+vendor/firmware/APDV_AUDIO_SLSI.bin
+vendor/firmware/SoundAlive.bin
 vendor/firmware/SoundBoosterParam.bin
 vendor/firmware/a2dpcom.bin
+vendor/firmware/abox_solution.conf
+vendor/firmware/abox_system.conf
 vendor/firmware/abox_tplg.bin
 vendor/firmware/abox_tplg.conf
 vendor/firmware/avsyncmix.bin
-vendor/firmware/bidirmic.bin
 vendor/firmware/calliope_dram.bin
+vendor/firmware/calliope_sram.bin
+vendor/firmware/compress_capture.bin
 vendor/firmware/dax_param.bin
-vendor/firmware/dolby.bin
-
-## Camera
-vendor/lib64/hw/camera.s5e8825.so
-vendor/lib64/libexynoscamera_plugin.so
-
-## Camera dependencies
-vendor/lib64/libMERTA.so
-vendor/lib64/libc++_shared.so
-vendor/lib64/libexynoscamera_merta_plugin.so
-vendor/lib64/libexynoscamera_swlme_plugin.so
-vendor/lib64/libexynoscamera_vpl_plugin.so
-vendor/lib64/libhwjsqz.so
-vendor/lib64/liblmecpu.so
-vendor/lib64/libsec2lsi_conversion.so
-vendor/lib64/libsensorlistener.so
-vendor/lib64/libswlme.so
-vendor/lib64/libuniapi.so
-vendor/lib64/libuniplugin.so
-vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
-
-## Camera Dummy Libs
-vendor/lib/libexynoscamera3.so;DUMMY_SHARED_LIB
-vendor/lib64/libexynoscamera3.so;DUMMY_SHARED_LIB
-
-## Codecs
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_profiles_V1_0.xml
-
-## Firmware
-vendor/firmware/OD_V2.1.6_01_26_QVGA.nnc
-vendor/firmware/OD_V2.3.7_02_05_VGA.nnc
-vendor/firmware/SetMultiCalInfo.bin
-vendor/firmware/dbmd8_va_asrp_fw.bin
-vendor/firmware/dbmd8_va_fw.bin
 vendor/firmware/default_configuration.flm.cfg.bin
-vendor/firmware/dual_cal_wide_swide.bin
-vendor/firmware/hx83102e_gta4xls.bin
-vendor/firmware/is_lib.bin
-vendor/firmware/is_rta.bin
+vendor/firmware/dolby.bin
+vendor/firmware/is_mcu_fw.bin
+vendor/firmware/lc3dec.bin
+vendor/firmware/lc3enc.bin
 vendor/firmware/listenbackeffect.bin
-vendor/firmware/lmecpu_GC5035.json
-vendor/firmware/lmecpu_S5K4HA.json
 vendor/firmware/rxse.bin
+vendor/firmware/sb_ll.bin
 vendor/firmware/sb_music.bin
 vendor/firmware/sb_others.bin
+vendor/firmware/secure_configuration.flm.cfg.bin
 vendor/firmware/sectiongraph_tplg.bin
 vendor/firmware/sectiongraph_tplg.conf
-vendor/firmware/secure_configuration.flm.cfg.bin
-vendor/firmware/setfile_4ha.bin
-vendor/firmware/setfile_gc5035.bin
 vendor/firmware/tfa9878.bin
 vendor/firmware/tfa98xx.cnt
 vendor/firmware/txse1.bin
 vendor/firmware/txse2.bin
 vendor/firmware/volumemonitor.bin
-vendor/firmware/w9021_gta4xls.bin
 
-## Gatekeeper
-vendor/lib/hw/gatekeeper.s5e8825.so
-vendor/lib64/hw/gatekeeper.s5e8825.so
+# OD
+vendor/firmware/OD_V2.4.3_05_11_QVGA_QUARTZ_ENN_RGB1P.nnc
+vendor/firmware/OD_V2.5.2_05_11_VGA_QUARTZ_ENN_RGB1P.nnc
 
-## GPS
-vendor/bin/hw/gps.sh
-vendor/bin/hw/gpsd
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
-vendor/etc/gnss/ca.pem
-vendor/etc/gnss/gps.cfg
-vendor/etc/init/init.gps.rc
-vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
-vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so;FIX_SONAME
-vendor/lib64/libwrappergps.so
-vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
-vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
+# Vibrator Firmware
+vendor/firmware/aw8622x_haptic.bin
+vendor/firmware/RTP1_RTP.bin
+vendor/firmware/RTP2_RTP.bin
+vendor/firmware/RTP3_RTP.bin
+vendor/firmware/RTP4_RTP.bin
+vendor/firmware/RTP5_RTP.bin
+vendor/firmware/RTP6_RTP.bin
+vendor/firmware/RTP7_RTP.bin
+vendor/firmware/RTP8_RTP.bin
+vendor/firmware/RTP9_RTP.bin
+vendor/firmware/RTP10_RTP.bin
+vendor/firmware/RTP11_RTP.bin
+vendor/firmware/RTP12_RTP.bin
+vendor/firmware/RTP13_RTP.bin
+vendor/firmware/RTP14_RTP.bin
+vendor/firmware/RTP15_RTP.bin
+vendor/firmware/RTP16_RTP.bin
+vendor/firmware/RTP17_RTP.bin
+vendor/firmware/RTP19_RTP.bin
+vendor/firmware/RTP24_RTP.bin
+vendor/firmware/RTP25_RTP.bin
+vendor/firmware/RTP27_RTP.bin
+vendor/firmware/RTP28_RTP.bin
+vendor/firmware/RTP29_RTP.bin
+vendor/firmware/RTP30_RTP.bin
+vendor/firmware/RTP31_RTP.bin
+vendor/firmware/RTP32_RTP.bin
+vendor/firmware/RTP33_RTP.bin
+vendor/firmware/RTP34_RTP.bin
+vendor/firmware/RTP35_RTP.bin
+vendor/firmware/RTP36_RTP.bin
+vendor/firmware/RTP37_RTP.bin
+vendor/firmware/RTP38_RTP.bin
+vendor/firmware/RTP39_RTP.bin
+vendor/firmware/RTP40_RTP.bin
+vendor/firmware/RTP41_RTP.bin
+vendor/firmware/RTP42_RTP.bin
+vendor/firmware/RTP47_RTP.bin
+vendor/firmware/RTP48_RTP.bin
+vendor/firmware/RTP50_RTP.bin
+vendor/firmware/RTP51_RTP.bin
+vendor/firmware/RTP52_RTP.bin
+vendor/firmware/RTP53_RTP.bin
+vendor/firmware/RTP54_RTP.bin
+vendor/firmware/RTP55_RTP.bin
+vendor/firmware/RTP56_RTP.bin
+vendor/firmware/RTP57_RTP.bin
+vendor/firmware/RTP58_RTP.bin
+vendor/firmware/RTP59_RTP.bin
+vendor/firmware/RTP60_RTP.bin
+vendor/firmware/RTP61_RTP.bin
+vendor/firmware/RTP62_RTP.bin
+vendor/firmware/RTP63_RTP.bin
+vendor/firmware/RTP64_RTP.bin
+vendor/firmware/RTP65_RTP.bin
+vendor/firmware/RTP66_RTP.bin
+vendor/firmware/RTP67_RTP.bin
+vendor/firmware/RTP68_RTP.bin
+vendor/firmware/RTP69_RTP.bin
+vendor/firmware/RTP70_RTP.bin
+vendor/firmware/RTP71_RTP.bin
+vendor/firmware/RTP72_RTP.bin
+vendor/firmware/RTP73_RTP.bin
+vendor/firmware/RTP74_RTP.bin
+vendor/firmware/RTP75_RTP.bin
+vendor/firmware/RTP76_RTP.bin
+vendor/firmware/RTP77_RTP.bin
+vendor/firmware/RTP78_RTP.bin
+vendor/firmware/RTP79_RTP.bin
+vendor/firmware/RTP80_RTP.bin
+vendor/firmware/RTP82_RTP.bin
+vendor/firmware/RTP83_RTP.bin
+vendor/firmware/RTP84_RTP.bin
+vendor/firmware/RTP85_RTP.bin
+vendor/firmware/RTP86_RTP.bin
+vendor/firmware/RTP87_RTP.bin
+vendor/firmware/RTP88_RTP.bin
+vendor/firmware/RTP89_RTP.bin
+vendor/firmware/RTP90_RTP.bin
+vendor/firmware/RTP91_RTP.bin
+vendor/firmware/RTP92_RTP.bin
+vendor/firmware/RTP93_RTP.bin
+vendor/firmware/RTP94_RTP.bin
+vendor/firmware/RTP95_RTP.bin
+vendor/firmware/RTP96_RTP.bin
+vendor/firmware/RTP97_RTP.bin
+vendor/firmware/RTP98_RTP.bin
+vendor/firmware/RTP99_RTP.bin
+vendor/firmware/RTP100_RTP.bin
+vendor/firmware/RTP101_RTP.bin
+vendor/firmware/RTP102_RTP.bin
+vendor/firmware/RTP103_RTP.bin
+vendor/firmware/RTP104_RTP.bin
+vendor/firmware/RTP105_RTP.bin
+vendor/firmware/RTP106_RTP.bin
+vendor/firmware/RTP107_RTP.bin
+vendor/firmware/RTP108_RTP.bin
+vendor/firmware/RTP109_RTP.bin
+vendor/firmware/RTP110_RTP.bin
+vendor/firmware/RTP111_RTP.bin
 
-## Graphics
-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1
-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1
-vendor/lib/hw/vulkan.mali.so
-vendor/lib64/hw/vulkan.mali.so
-
-## Keymint
-vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
-vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
-vendor/lib64/lib_android_keymaster_keymint_utils.so:vendor/lib64/lib_android_keymaster_skeymint_utils.so;FIX_SONAME
-vendor/lib64/libkeymaster_portable.so:vendor/lib64/libkeymaster_portable.samsung.so;FIX_SONAME
-vendor/lib64/libkeymint.so:vendor/lib64/libskeymint.so;FIX_SONAME
-vendor/lib64/libskeymint10device.so
-vendor/lib64/libskeymint_cli.so
-vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
-
-# Ramdisk firmware
-vendor_ramdisk/vendor/firmware/hx83102e_gta4xls.bin
-vendor_ramdisk/vendor/firmware/w9021_gta4xls.bin
-
-# Recovery firmware
-vendor_ramdisk/vendor/firmware/hx83102e_gta4xls.bin:recovery/root/vendor/firmware/hx83102e_gta4xls.bin
-vendor_ramdisk/vendor/firmware/w9021_gta4xls.bin:recovery/root/vendor/firmware/w9021_gta4xls.bin
-
-## RIL
-vendor/etc/init/init.baseband.rc
-vendor/lib64/libengmode_client.so
-
-## RIL - from a14 - A145FXXS5BXA1
-vendor/lib/libsecril-client.so|96bf65152d221ac528b763f625bb93e56899033d
-vendor/lib64/libsecril-client.so|26efd845750d4ad91e3a5c5dd7d95d40e8ef52a8
-
-## SECNATIVE
-vendor/lib/libsecnativefeature.so
-vendor/lib64/libsecnativefeature.so
-
-## TEEGRIS
-vendor/bin/tzdaemon
-vendor/bin/tzts_daemon
-vendor/etc/init/teegris_v4.rc
-vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
-vendor/lib/libteecl.so
-vendor/lib64/libteecl.so
-vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
-
-## Sensors
-vendor/etc/init/init.sensorhub.rc
-vendor/etc/sensors/hals.conf
-vendor/lib/sensors.grip.so
-vendor/lib/sensors.sensorhub.so
-vendor/lib/sensors.inputvirtual.so
-vendor/lib64/sensors.grip.so
-vendor/lib64/sensors.inputvirtual.so
-vendor/lib64/sensors.sensorhub.so
-
-## VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
-vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
-
-## Widevine
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
-vendor/lib64/libwvhidl.so
-
-## Wi-Fi
-vendor/etc/init/wifi.rc
-vendor/etc/init/wifi_slsi.rc
-vendor/etc/wifi/indoorchannel.info
-vendor/etc/wifi/mx140.bin
-vendor/etc/wifi/mx140_common.hcf
-vendor/etc/wifi/mx140_t.bin
-vendor/etc/wifi/mx140_common.hcf
-vendor/etc/wifi/mx140_t_wlan.hcf
-vendor/etc/wifi/mx140_t_wlan_t.hcf
-vendor/etc/wifi/slsi_reg_database.bin
+# WiFi Firmware
+vendor/firmware/wifi/hydra_config.sdb
+vendor/firmware/wifi/mx140/build_id.txt
+vendor/firmware/wifi/mx140/wpal
+vendor/firmware/wifi/mx140.bin
+vendor/firmware/wifi/mx140_bt.hcf
+vendor/firmware/wifi/mx140_common.hcf
+vendor/firmware/wifi/mx140_wlan.hcf
+vendor/firmware/wifi/mx140_wlan_sw.hcf
+vendor/firmware/wifi/mx140_wlan_t.hcf
+vendor/firmware/wifi/mx140_wlan_t_sw.hcf
+vendor/firmware/wifi/platform.txt
+vendor/firmware/wifi/slsi_reg_database.bin

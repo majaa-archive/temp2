@@ -41,3 +41,13 @@ extern void *ASN1_TIME_set(void *s, time_t time);
 void *ASN1_TIME_set_posix(void *s, int64_t posix_time) {
     return ASN1_TIME_set(s, posix_time);
 }
+
+extern void *OPENSSL_sk_delete(void *sk, size_t i);
+void *sk_delete(void *sk, size_t i) {
+    return OPENSSL_sk_delete(sk, i);
+}
+
+extern void *OPENSSL_sk_dup(void *sk);
+void *sk_dup(void *sk) {
+    return OPENSSL_sk_dup(sk);
+}

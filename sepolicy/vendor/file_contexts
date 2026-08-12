@@ -1,10 +1,10 @@
-## Data Files
+# Data Files
 /data/vendor/camera(/.*)?                    u:object_r:camera_vendor_data_file:s0
 /data/vendor/media(/.*)?                     u:object_r:media_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
 /data/camera(/.*)?                           u:object_r:camera_data_file:s0
 
-## Devices
+# Devices
 # Bluetooth
 /dev/scsc_h4_0                               u:object_r:bt_device:s0
 
@@ -24,7 +24,7 @@
 # ZRAM
 /dev/block/zram0                             u:object_r:swap_block_device:s0
 
-## EFS
+# EFS
 /efs/FactoryApp(/.*)?                        u:object_r:app_efs_file:s0
 /efs/TEE(/.*)?                               u:object_r:prov_efs_file:s0
 /efs/biometrics(/.*)?                        u:object_r:sec_efs_file:s0
@@ -44,7 +44,7 @@
 /efs/usb_hw_param(/.*)?                      u:object_r:sec_efs_file:s0
 /efs/wv.keys                                 u:object_r:sec_efs_file:s0
 
-## Sysfs
+# Sysfs
 # Block
 /sys/devices/platform/(.*)/block/sda/queue/discard_max_bytes  u:object_r:sysfs_block_writable:s0
 /sys/devices/platform/(.*)/block/sda/queue/read_ahead_kb      u:object_r:sysfs_block_writable:s0
@@ -71,5 +71,8 @@
 # Wakeup
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                 u:object_r:sysfs_wakeup:s0
 
-## Vendor
+# Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh        u:object_r:gpsd_exec:s0
+/sys/devices/virtual/sec_vib_inputff/control(/.*)?    u:object_r:sysfs_vibrator:s0
+/vendor/bin/hw/android\.hardware\.vibrator(@[0-9].[0-9])?-service\.s5e8835(-haptic)?    u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.s5e8835  u:object_r:hal_fingerprint_default_exec:s0
