@@ -40,7 +40,7 @@ $(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/samsung/a54x-common:
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
 ## Boot Image
-BOARD_BOOTCONFIG := buildtime_bootconfig=enable androidboot.console=0 androidboot.selinux=permissive
+BOARD_BOOTCONFIG := buildtime_bootconfig=enable androidboot.console=0
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INIT_BOOT_HEADER_VERSION := 4
