@@ -254,6 +254,8 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
     android.hardware.usb.gadget-service.samsung
 
+$(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.s5e8835
