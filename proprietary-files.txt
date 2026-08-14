@@ -266,7 +266,7 @@ vendor/firmware/abox_tplg.bin
 vendor/firmware/abox_tplg.conf
 vendor/firmware/avsyncmix.bin
 vendor/firmware/calliope_dram.bin
-vendor/firmware/calliope_sram.bin
+vendor/firmware/calliope_sram.bin:vendor/firmware/SM-A546B/calliope_sram.bin
 vendor/firmware/compress_capture.bin
 vendor/firmware/dax_param.bin
 vendor/firmware/default_configuration.flm.cfg.bin
@@ -287,6 +287,9 @@ vendor/firmware/tfa98xx.cnt
 vendor/firmware/txse1.bin
 vendor/firmware/txse2.bin
 vendor/firmware/volumemonitor.bin
+
+# Audio Firmware - from SM-A546E - A546EXXUFEYI4
+vendor/firmware/SM-A546E/calliope_sram.bin|64fd9dc4e0fd72249d5c1ee84a636b5714ede41c
 
 # OD
 vendor/firmware/OD_V2.4.3_05_11_QVGA_QUARTZ_ENN_RGB1P.nnc
