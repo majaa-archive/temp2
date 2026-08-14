@@ -75,7 +75,7 @@ PRODUCT_PACKAGES += \
 
 # Codec2
 PRODUCT_PACKAGES += \
-    samsung.hardware.media.c2@1.2-service \
+    samsung.hardware.media.c2-service \
 
 PRODUCT_PACKAGES += \
     libExynosC2H264Dec \
