@@ -107,10 +107,6 @@ vendor/etc/dqe/hlgLut_Default.xml
 vendor/etc/dqe/hlgLut_Inner_SRGB.xml
 vendor/etc/dqe/wcgLut.xml
 vendor/lib64/libExynosHWCService.so
-vendor/lib/libdisplaycolor_default.so
-vendor/lib/libhdr10p_meta_plugin_default.so
-vendor/lib/libhdr_plugin.so
-vendor/lib/vendor.samsung.libcolor.custom.so
 vendor/lib64/libdisplaycolor_default.so
 vendor/lib64/libhdr10p_meta_plugin_default.so
 vendor/lib64/libhdr_plugin.so
@@ -171,8 +167,6 @@ vendor/lib64/vendor.samsung.hardware.gnss-V3-ndk.so
 # Graphics
 vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1
 vendor/lib64/hw/vulkan.mali.so
-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1
-vendor/lib/hw/vulkan.mali.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
