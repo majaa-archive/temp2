@@ -343,10 +343,3 @@
 /sys/class/vib_info_class/vib_support_info	intensities			0664	system system
 /sys/class/vib_info_class/vib_support_info	haptic_intensities	0664	system system
 /sys/class/vib_info_class/vib_support_info	functions			0664	system system
-
-#
-# ] Permissions for Vibrator
-#
-
-# PROCA dev config
-/dev/proca_config         0440   system     system
