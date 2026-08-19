@@ -90,6 +90,11 @@ ro.vendor.cscsupported=1
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 1380
 
+## Fingerprint
+ro.vendor.fingerprint.type=udfps_optical
+ro.vendor.fingerprint.force_calibrate=1
+ro.vendor.fingerprint.request_touch_event=true
+
 ## Wi-Fi
 wifi.direct.interface=p2p0
 ro.boot.wificountrycode=00
