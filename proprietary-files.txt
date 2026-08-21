@@ -67,8 +67,6 @@ vendor/lib64/libsemseg.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libvpl.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
-vendor/lib64/libhypervintf.so
-vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk.so
 vendor/bin/hw/vendor.samsung.hardware.camera.provider-service_64
 vendor/etc/init/vendor.samsung.hardware.camera.provider-service_64.rc
 vendor/etc/vintf/manifest/vendor.samsung.hardware.camera.provider-service.xml
