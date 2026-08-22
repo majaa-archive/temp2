@@ -93,6 +93,7 @@
                 <route sink="a2dp input" sources="BT A2DP In" type="mix" />
             </routes>
         </module>
+        <xi:include href="bluetooth_audio_policy_configuration_7_0.xml" />
         <module halVersion="2.0" name="r_submix">
             <attachedDevices>
                 <item>Remote Submix In</item>
