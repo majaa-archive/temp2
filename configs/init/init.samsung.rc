@@ -940,6 +940,9 @@ on boot
 on property:sys.boot_completed=1
     write /sys/class/power_supply/battery/boot_completed "1"
 
+# Power HAL
+    setprop vendor.powerhal.init 1
+
 # GPU DVFS
     chown system system /sys/kernel/gpu/gpu_freq_table
     chown system system /sys/kernel/gpu/gpu_governor
