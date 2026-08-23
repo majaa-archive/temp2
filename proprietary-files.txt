@@ -240,7 +240,6 @@ vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
 
 # WiFi
 vendor/bin/init.insmod.sh
-vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_slsi.rc
 vendor/etc/init.insmod.s5e8835.cfg
 
