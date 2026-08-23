@@ -293,7 +293,7 @@ $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.s5e8835
 
-$(call soong_config_set_bool,samsungVibratorVars,duration_amplitude,true)
+$(call soong_config_set_bool,samsungVibratorVars,duration_amplitude,false)
 
 # WiFi
 PRODUCT_PACKAGES += \
