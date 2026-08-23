@@ -1,0 +1,6 @@
+get_prop(rild, vendor_radio_prop);
+set_prop(rild, radio_prop);
+
+dontaudit rild default_prop:property_service set;
+dontaudit rild default_prop:file r_file_perms;
+dontaudit rild system_prop:file r_file_perms;
