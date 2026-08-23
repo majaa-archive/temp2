@@ -1,12 +1,45 @@
 {
     "Nodes": [
         {
+            "Name": "CPUMinFreq",
+            "Path": "/sys/power/cpufreq_min_limit",
+            "Values": [
+                "2016000",
+                "1824000",
+                "1440000",
+                "1344000",
+                "1100000"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "GPUMinFreq",
             "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
                 "806000",
+                "702000",
+                "611000",
                 "507000",
-                "312000",
+                "403000",
+                "312000"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "MIFMinFreq",
+            "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min",
+            "Values": [
+                "1352000",
+                "1014000"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CStateControl",
+            "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control",
+            "Values": [
+                "1",
+                "0"
             ],
             "ResetOnInit": true
         },
@@ -14,6 +47,7 @@
             "Name": "TABoost",
             "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
             "Values": [
+                "80",
                 "30",
                 "5"
             ],
@@ -66,9 +100,57 @@
         },
         {
             "PowerHint": "INTERACTION",
+            "Node": "CPUMinFreq",
+            "Duration": 0,
+            "Value": "1100000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "MIFMinFreq",
+            "Duration": 0,
+            "Value": "1014000"
+        },
+        {
+            "PowerHint": "INTERACTION",
             "Node": "GPUMinFreq",
             "Duration": 0,
             "Value": "507000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CStateControl",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPUMinFreq",
+            "Duration": 2500,
+            "Value": "1824000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "MIFMinFreq",
+            "Duration": 2500,
+            "Value": "1352000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUMinFreq",
+            "Duration": 2500,
+            "Value": "611000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CStateControl",
+            "Duration": 2500,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "TABoost",
+            "Duration": 2500,
+            "Value": "80"
         },
         {
             "PowerHint": "LAUNCH",
@@ -78,9 +160,21 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1440000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 1000,
             "Value": "0x0000002c"
+        },
+        {
+            "PowerHint": "CAMERA_SHOT",
+            "Node": "CPUMinFreq",
+            "Duration": 1000,
+            "Value": "1824000"
         },
         {
             "PowerHint": "CAMERA_SHOT",
