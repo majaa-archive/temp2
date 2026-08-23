@@ -178,6 +178,7 @@ vendor/lib64/libsec_semRil.so
 vendor/lib64/libspictrl.so
 
 # NFC
+system/etc/nfc_key
 vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
 vendor/etc/init/init.nfc.samsung.rc
 vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc

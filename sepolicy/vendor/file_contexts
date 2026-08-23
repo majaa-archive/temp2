@@ -18,6 +18,9 @@
 /dev/mali[0-9]                               u:object_r:gpu_device:s0
 /dev/g2d                                     u:object_r:graphics_device:s0
 
+# NFC
+/dev/pn547                                    u:object_r:nfc_device:s0
+
 # Secmem
 /dev/s5p-smem                                u:object_r:secmem_device:s0
 
@@ -76,3 +79,4 @@
 /sys/devices/virtual/sec_vib_inputff/control(/.*)?    u:object_r:sysfs_vibrator:s0
 /vendor/bin/hw/android\.hardware\.vibrator(@[0-9].[0-9])?-service\.s5e8835(-haptic)?    u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.s5e8835  u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/nxp\.android\.hardware\.nfc@1\.2-service                      u:object_r:hal_nfc_default_exec:s0
