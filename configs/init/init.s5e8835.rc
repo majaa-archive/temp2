@@ -59,6 +59,14 @@ on init
 
     # EMS interfaces
     chown system system /dev/ems
+    chown root system /sys/kernel/ems/taskgroup/dex2oat/proc
+    chown root system /sys/kernel/ems/taskgroup/dex2oat/task
+    chown root system /sys/kernel/ems/taskgroup/dex2oat/uclamp_max
+    chown root system /sys/kernel/ems/taskgroup/dex2oat/uclamp_min
+    chmod 0664 /sys/kernel/ems/taskgroup/dex2oat/proc
+    chmod 0664 /sys/kernel/ems/taskgroup/dex2oat/task
+    chmod 0664 /sys/kernel/ems/taskgroup/dex2oat/uclamp_max
+    chmod 0664 /sys/kernel/ems/taskgroup/dex2oat/uclamp_min
     chown system system /sys/kernel/ems/emstune/req_mode
     chown system system /sys/kernel/ems/emstune/req_level
     chown system system /sys/kernel/ems/emstune/aio_tuner
@@ -249,6 +257,10 @@ on post-fs-data
     mkdir /data/vendor/log/vts 0771 audioserver system
 
     setprop vold.post_fs_data_done 1
+
+    # Dalvik
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
 
 # Permissions for audio
     chmod 0660 /proc/audio/aboxhalflog
