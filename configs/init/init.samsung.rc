@@ -80,10 +80,14 @@ on post-fs-data
     mkdir /efs/sec_efs 0775 radio system
 
     #BUS
-    chown system radio /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
+    chown root system /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
     chown system radio /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
     chmod 0664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
     chmod 0444 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
+
+    # CPU freq limit (exynos-ufcc UFC, used by power HAL)
+    chmod 0664 /sys/devices/platform/exynos-ufcc/ufc/cpufreq_min_limit
+    chmod 0664 /sys/devices/platform/exynos-ufcc/ufc/cpufreq_max_limit
 
     #input booster
     chown radio system /sys/class/input_booster/level
@@ -356,11 +360,6 @@ on boot
     chmod 0664 /dev/ccic_misc
 
     # Permission for DVFS helper
-    chown system radio /sys/power/cpufreq_min_limit
-    chown system radio /sys/power/cpufreq_max_limit
-    chown system radio /sys/power/cpufreq_table
-    chmod 0664 /sys/power/cpufreq_min_limit
-    chmod 0664 /sys/power/cpufreq_max_limit
 
     # permission for CHARGING
     mkdir /efs/Battery 0775 radio system
