@@ -102,19 +102,19 @@
             "PowerHint": "INTERACTION",
             "Node": "CPUMinFreq",
             "Duration": 0,
-            "Value": "1056000"
+            "Value": "1344000"
         },
         {
             "PowerHint": "INTERACTION",
             "Node": "MIFMinFreq",
             "Duration": 0,
-            "Value": "1014000"
+            "Value": "1352000"
         },
         {
             "PowerHint": "INTERACTION",
             "Node": "GPUMinFreq",
             "Duration": 0,
-            "Value": "507000"
+            "Value": "611000"
         },
         {
             "PowerHint": "INTERACTION",

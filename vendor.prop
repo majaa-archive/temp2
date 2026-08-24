@@ -91,6 +91,7 @@ ro.crypto.volume.metadata.method=dm-default-key
 
 ## Power HAL
 vendor.powerhal.disp.idle_support=false
+vendor.powerhal.interaction.min=2400
 
 ## Samsung specific
 ro.product_ship=true
