@@ -96,3 +96,4 @@
 /dev/vertex[0-9]+                            u:object_r:vertex_device:s0
 
 /sys/devices/virtual/camera/flash/rear_flash u:object_r:sysfs_camera_writable:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.epic@1\.0(-lazy)?-service u:object_r:hal_vendor_epic_service_default_exec:s0
