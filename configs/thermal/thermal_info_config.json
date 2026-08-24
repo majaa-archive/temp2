@@ -7,13 +7,38 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                96.0,
-                "NAN",
-                "NAN",
-                115.0
+                74.0,
+                79.0,
+                84.0,
+                95.0
+            ],
+            "HotHysteresis": [
+                0.0,
+                0.0,
+                0.0,
+                2.0,
+                2.0,
+                2.0,
+                2.0
             ],
             "VrThreshold": "NAN",
-            "Multiplier": 0.001
+            "Multiplier": 0.001,
+            "Monitor": true,
+            "LogLevel": 3,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "thermal-cpufreq-1",
+                    "LimitInfo": [
+                        0,
+                        0,
+                        0,
+                        10,
+                        14,
+                        18,
+                        22
+                    ]
+                }
+            ]
         },
         {
             "Name": "LITTLE",
@@ -22,13 +47,38 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                96.0,
-                "NAN",
-                "NAN",
-                115.0
+                75.0,
+                80.0,
+                85.0,
+                95.0
+            ],
+            "HotHysteresis": [
+                0.0,
+                0.0,
+                0.0,
+                2.0,
+                2.0,
+                2.0,
+                2.0
             ],
             "VrThreshold": "NAN",
-            "Multiplier": 0.001
+            "Multiplier": 0.001,
+            "Monitor": true,
+            "LogLevel": 3,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "thermal-cpufreq-0",
+                    "LimitInfo": [
+                        0,
+                        0,
+                        0,
+                        6,
+                        9,
+                        12,
+                        15
+                    ]
+                }
+            ]
         },
         {
             "Name": "G3D",
@@ -37,13 +87,38 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                96.0,
-                "NAN",
-                "NAN",
-                115.0
+                73.0,
+                78.0,
+                83.0,
+                95.0
+            ],
+            "HotHysteresis": [
+                0.0,
+                0.0,
+                0.0,
+                2.0,
+                2.0,
+                2.0,
+                2.0
             ],
             "VrThreshold": "NAN",
-            "Multiplier": 0.001
+            "Multiplier": 0.001,
+            "Monitor": true,
+            "LogLevel": 3,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "thermal-gpufreq-0",
+                    "LimitInfo": [
+                        0,
+                        0,
+                        0,
+                        4,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ]
         },
         {
             "Name": "ISP",
@@ -52,13 +127,29 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                96.0,
                 "NAN",
                 "NAN",
-                115.0
+                "NAN",
+                105.0
             ],
             "VrThreshold": "NAN",
-            "Multiplier": 0.001
+            "Multiplier": 0.001,
+            "Monitor": true,
+            "LogLevel": 3,
+            "BindedCdevInfo": [
+                {
+                    "CdevRequest": "thermal-isp-0",
+                    "LimitInfo": [
+                        0,
+                        0,
+                        0,
+                        1,
+                        2,
+                        3,
+                        4
+                    ]
+                }
+            ]
         },
         {
             "Name": "ac",
@@ -83,7 +174,8 @@
             ],
             "VrThreshold": "NAN",
             "Multiplier": 0.001,
-            "Monitor": true
+            "Monitor": true,
+            "LogLevel": 5
         },
         {
             "Name": "battery",
@@ -98,7 +190,9 @@
                 60.0
             ],
             "VrThreshold": "NAN",
-            "Multiplier": 0.001
+            "Multiplier": 0.001,
+            "Monitor": true,
+            "LogLevel": 5
         }
     ],
     "CoolingDevices": [
