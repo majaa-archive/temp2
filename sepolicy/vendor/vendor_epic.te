@@ -5,6 +5,7 @@ init_daemon_domain(hal_vendor_epic_service_default)
 
 binder_use(hal_vendor_epic_service_default)
 binder_call(hal_vendor_epic_service_default, hwservicemanager)
+get_prop(hal_vendor_epic_service_default, hwservicemanager_prop)
 
 allow hal_vendor_epic_service_default hal_vendor_epic_hwservice:hwservice_manager { add find };
 add_service(hal_vendor_epic_service_default, hal_vendor_epic_service)

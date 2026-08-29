@@ -7,6 +7,11 @@ allow init kernel:system module_request;
 
 allow init socket_device:sock_file { create setattr unlink };
 
+# epicd
+allow init epicd_socket:sock_file { create setattr unlink };
+allow init epicd_socket:unix_dgram_socket create_socket_perms_no_ioctl;
+allow init epicd_socket:unix_stream_socket create_socket_perms_no_ioctl;
+
 allow init sysfs_block_writable:file rw_file_perms;
 
 allow init self:capability sys_module;
