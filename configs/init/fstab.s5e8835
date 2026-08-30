@@ -27,4 +27,8 @@ odm	/odm	ext4	ro,errors=panic	wait,logical,first_stage_mount
 /dev/block/by-name/efs		/mnt/vendor/efs	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,formattable,check
 /dev/block/by-name/cpefs	/mnt/vendor/cpefs	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check,nofail
 /dev/block/by-name/recovery	/recovery	emmc	defaults	first_stage_mount
-/dev/block/by-name/misc		/misc		emmc	defaults	defaults,first_stage_mount
+/dev/block/by-name/misc		/misc		emmc		defaults	defaults,first_stage_mount
+
+# VOLD
+/devices/platform/13200000.usb*                auto    auto    default    voldmanaged=usb:auto
+/devices/platform/100e0000.dwmmc2/mmc_host*    auto    auto    default    voldmanaged=sdcard:auto
